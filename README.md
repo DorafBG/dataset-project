@@ -6,14 +6,15 @@ But: projet visant à construire un dataset synthétique sur la reproduction soc
 Assembler et harmoniser plusieurs indicateurs liés à la mobilité/reproduction sociale (résultats scolaires et lien intergénérationnel) pour un jeu de données comparatif par pays européens.
 
 ## Sources de données (préliminaire)
-- Classement PISA 2025 (niveau d'études / performance scolaire) — filtrer sur pays européens ciblés  
-    https://data-explorer.oecd.org/vis?pg=0&bp=true&snb=7&tm=PISA&vw=tb&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_GOV_INT%40DF_GOV_SPS_2025&df[ag]=OECD.GOV.GIP&df[vs]=1.0&dq=A.......&pd=2012%2C&to[TIME_PERIOD]=false **(oecd_pisa.csv)**
-- Réussite au baccalauréat en France selon l’origine sociale (données par origine sociale)  
-    https://www.data.gouv.fr/datasets/reussite-au-baccalaureat-selon-lorigine-sociale/ **(transition_of_educational_attainment_level_europa_eu_ilc_igtp01.csv)**
-- Réussite au GCSE (Royaume‑Uni) en fonction du FSM (Free School Meals — proxy d'origine sociale)  
-    https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-4-performance/2024-25#explore-data-and-files **(uk_202425_national_characteristics_summary_all_state_funded_provisional.csv)**
+- Classement PISA 2022 (niveau d'études / performance scolaire) — filtrer sur pays européens ciblés  
+    https://data-explorer.oecd.org/vis?pg=0&bp=true&snb=7&tm=PISA&vw=tb&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_GOV_INT%40DF_GOV_SPS_2025&df[ag]=OECD.GOV.GIP&df[vs]=1.0&dq=A.......&pd=2012%2C&to[TIME_PERIOD]=false **(2022_oecd_pisa.csv)**
 - Pourcentage de la réussite scolaire par rapport à celle des parents (Eurostat, indicateur intergénérationnel selon les différents niveau d'éducation) 
-    https://ec.europa.eu/eurostat/databrowser/view/ilc_igtp01/default/table **(transition_of_educational_attainment_level_europa_eu_ilc_igtp01.csv)**
+    https://ec.europa.eu/eurostat/databrowser/view/ilc_igtp01/default/table **(2019_2023_europa_transition_of_educational_attainment_level_europa_eu_ilc_igtp01.csv.csv)**
+- PPP (pouvoir d'achat) par pays d'Europe en 2023
+    https://data-explorer.oecd.org/vis?fs[0]=Topic%2C1%7CEconomy%23ECO%23%7CPrices%23ECO_PRI%23&pg=20&fc=Topic&bp=true&snb=32&vw=tb&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_PPP%40DF_PPP&df[ag]=OECD.SDD.TPS&df[vs]=1.0&pd=2023%2C2023&dq=.A.PPP...OECD&to[TIME_PERIOD]=false&ly[rw]=REF_AREA **(2023_oecd_PPP.csv)**
+- Salaire médian en fonction du niveau d'éducation en 2023
+    https://ec.europa.eu/eurostat/databrowser/view/ilc_di08__custom_19201270/default/table **(2023_europa_salaireMedianParNiveaudEducation.csv)**
+
 
 Remarque : certaines sources proposent l’export direct en CSV/Excel (voir onglet/tables pour trier et exporter).
 
