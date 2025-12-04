@@ -7,13 +7,13 @@ Assembler et harmoniser plusieurs indicateurs liés à la mobilité/reproduction
 
 ## Sources de données (préliminaire)
 - Classement PISA 2025 (niveau d'études / performance scolaire) — filtrer sur pays européens ciblés  
-    https://data-explorer.oecd.org/vis?pg=0&bp=true&snb=7&tm=PISA&vw=tb&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_GOV_INT%40DF_GOV_SPS_2025&df[ag]=OECD.GOV.GIP&df[vs]=1.0&dq=A.......&pd=2012%2C&to[TIME_PERIOD]=false
+    https://data-explorer.oecd.org/vis?pg=0&bp=true&snb=7&tm=PISA&vw=tb&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_GOV_INT%40DF_GOV_SPS_2025&df[ag]=OECD.GOV.GIP&df[vs]=1.0&dq=A.......&pd=2012%2C&to[TIME_PERIOD]=false **(oecd_pisa.csv)**
 - Réussite au baccalauréat en France selon l’origine sociale (données par origine sociale)  
-    https://www.data.gouv.fr/datasets/reussite-au-baccalaureat-selon-lorigine-sociale/
+    https://www.data.gouv.fr/datasets/reussite-au-baccalaureat-selon-lorigine-sociale/ **(transition_of_educational_attainment_level_europa_eu_ilc_igtp01.csv)**
 - Réussite au GCSE (Royaume‑Uni) en fonction du FSM (Free School Meals — proxy d'origine sociale)  
-    https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-4-performance/2024-25#explore-data-and-files
-- Pourcentage de la réussite scolaire par rapport à celle des parents (Eurostat, indicateur intergénérationnel) — filtrer par pays européens  
-    https://ec.europa.eu/eurostat/databrowser/view/ilc_igtp01/default/table
+    https://explore-education-statistics.service.gov.uk/find-statistics/key-stage-4-performance/2024-25#explore-data-and-files **(uk_202425_national_characteristics_summary_all_state_funded_provisional.csv)**
+- Pourcentage de la réussite scolaire par rapport à celle des parents (Eurostat, indicateur intergénérationnel selon les différents niveau d'éducation) 
+    https://ec.europa.eu/eurostat/databrowser/view/ilc_igtp01/default/table **(transition_of_educational_attainment_level_europa_eu_ilc_igtp01.csv)**
 
 Remarque : certaines sources proposent l’export direct en CSV/Excel (voir onglet/tables pour trier et exporter).
 
