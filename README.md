@@ -13,7 +13,7 @@ Assembler et harmoniser plusieurs indicateurs liés à la mobilité/reproduction
 - PPP (pouvoir d'achat) par pays d'Europe en 2023
     https://data-explorer.oecd.org/vis?fs[0]=Topic%2C1%7CEconomy%23ECO%23%7CPrices%23ECO_PRI%23&pg=20&fc=Topic&bp=true&snb=32&vw=tb&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_PPP%40DF_PPP&df[ag]=OECD.SDD.TPS&df[vs]=1.0&pd=2023%2C2023&dq=.A.PPP...OECD&to[TIME_PERIOD]=false&ly[rw]=REF_AREA **(2023_oecd_PPP.csv)**
 - Salaire médian en fonction du niveau d'éducation en 2023
-    https://ec.europa.eu/eurostat/databrowser/view/ilc_di08__custom_19201270/default/table **(2023_europa_salaireMedianParNiveaudEducation.csv)**
+    https://ec.europa.eu/eurostat/databrowser/bookmark/9c253e44-c5dd-4fa5-aca6-df0dd178b9c9?lang=en&createdAt=2025-12-11T11:07:47Z**
 
 
 Remarque : certaines sources proposent l’export direct en CSV/Excel (voir onglet/tables pour trier et exporter).
