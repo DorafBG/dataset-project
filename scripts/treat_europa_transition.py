@@ -1,4 +1,5 @@
 import pandas as pd
+from utils import EUROPEAN_COUNTRIES, EN_TO_FR
 import os
 
 # Chemins des fichiers (relatifs au script)
@@ -8,12 +9,6 @@ RAW_FILE = os.path.join(PROJECT_ROOT, "data", "raw", "2019_2023_europa_transitio
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "data", "processed")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "eurostat_transition_cleaned.csv")
 
-# Liste des pays européens à garder (codes ISO2)
-EUROPEAN_COUNTRIES = [
-    'AL', 'AT', 'BE', 'BG', 'CH', 'CY', 'CZ', 'DE', 'DK', 'EE', 'EL', 'ES', 
-    'FI', 'FR', 'HR', 'HU', 'IE', 'IS', 'IT', 'LT', 'LU', 'LV', 'ME', 'MK', 
-    'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'RS', 'SE', 'SI', 'SK', 'TR', 'UK', 'XK'
-]
 
 def main():
     print("Chargement des données...")
@@ -122,11 +117,26 @@ def main():
     
     print(f"\nNombre de pays dans le dataset final : {len(df_pivot)}")
     print(f"Colonnes créées : {list(df_pivot.columns)}")
-    
+
+    # Appliquer la traduction sur la colonne country_name du DataFrame final
+    df_pivot['country_name'] = (
+        df_pivot['country_name']
+        .astype(str)
+        .str.strip()
+        .map(EN_TO_FR)
+        .fillna(df_pivot['country_name'])
+    )
+
+    df_pivot.rename(columns={'country_code': 'code_pays', 'country_name': 'pays'}, inplace=True)
+
     # 7. Sauvegarder le fichier nettoyé
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     df_pivot.to_csv(OUTPUT_FILE, index=False, encoding='utf-8-sig')
-    
+
+
+
+     # Sauvegarder le fichier nettoyé avec les noms français
+
     print(f"\n✓ Fichier nettoyé sauvegardé : {OUTPUT_FILE}")
 
 if __name__ == "__main__":
