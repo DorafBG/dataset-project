@@ -1,4 +1,4 @@
-pays,code_pays,score_maths_pisa,score_lecture_pisa,variance_maths_pisa
+﻿pays,code_pays,score_maths_pisa,score_lecture_pisa,variance_maths_pisa
 Allemagne,DE,474.83,480.0,18.7
 Autriche,AT,487.27,480.0,19.38
 Belgique,BE,489.49,479.0,21.83
