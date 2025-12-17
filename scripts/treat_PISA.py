@@ -1,29 +1,22 @@
 import pandas as pd
+from utils import EUROPEAN_COUNTRIES_ISO3, ISO3_TO_ISO2
+import os
 
 # Charger les données brutes OCDE PISA
-data = pd.read_csv(r'C:\Louis\Cours\IIM\Ingénierie_Des_Données\Projet\dataset-project\data\raw\2022_oecd_pisa.csv')
+# Chemins des fichiers (relatifs au script)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+RAW_FILE = os.path.join(PROJECT_ROOT, "data", "raw", "2022_oecd_pisa.csv")
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, "data", "processed")
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, "pisa_cleaned.csv")
 
-# Mapping ISO3 → ISO2 (pays européens uniquement)
-iso3_to_iso2_europe = {
-    "ALB": "AL", "DEU": "DE", "AND": "AD", "AUT": "AT",
-    "BEL": "BE", "BLR": "BY", "BIH": "BA", "BGR": "BG",
-    "CYP": "CY", "HRV": "HR", "DNK": "DK", "ESP": "ES",
-    "EST": "EE", "FIN": "FI", "FRA": "FR", "GRC": "GR",
-    "HUN": "HU", "IRL": "IE", "ISL": "IS", "ITA": "IT",
-    "XKX": "XK",  # Kosovo (code ISO non officiel, utilisé par OSCE/UE)
-    "LVA": "LV", "LIE": "LI", "LTU": "LT", "LUX": "LU",
-    "MLT": "MT", "MDA": "MD", "MNE": "ME", "NLD": "NL",
-    "NOR": "NO", "POL": "PL", "PRT": "PT", "CZE": "CZ",
-    "ROU": "RO", "GBR": "GB", "SRB": "RS", "SVK": "SK",
-    "SVN": "SI", "SWE": "SE", "CHE": "CH", "MKD": "MK",
-    "UKR": "UA", "TUR": "TR"
-}
 
+data = pd.read_csv(RAW_FILE)
 # Extraire ISO3 depuis REF_AREA (déjà en ISO3 normalement)
 data['code_pays_iso3'] = data['REF_AREA'].str[:3]
 
 # Convertir ISO3 → ISO2 pour filtrer
-data['code_pays_iso2'] = data['code_pays_iso3'].map(iso3_to_iso2_europe)
+data['code_pays_iso2'] = data['code_pays_iso3'].map(ISO3_TO_ISO2)
 
 # Filtrer les pays européens : garder uniquement ceux présents dans le mapping
 data_europe = data[data['code_pays_iso2'].notna()].copy()
@@ -79,7 +72,7 @@ print("\nStatistiques descriptives :")
 print(pivot_data.describe())
 
 # Sauvegarde
-output_path = r'C:\Louis\Cours\IIM\Ingénierie_Des_Données\Projet\dataset-project\data\processed\pisa_traite.csv'
-pivot_data.to_csv(output_path, index=False, encoding='utf-8')
 
-print(f"\nDonnées sauvegardées dans : {output_path}")
+pivot_data.to_csv(OUTPUT_FILE, index=False, encoding='utf-8')
+
+print(f"\nDonnées sauvegardées dans : {OUTPUT_DIR}")
