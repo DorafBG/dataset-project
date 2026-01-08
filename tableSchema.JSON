@@ -1,0 +1,122 @@
+{
+  "fields": [
+    {
+      "name": "code_pays",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "minLength": 2,
+        "maxLength": 2,
+        "pattern": "^[A-Z]{2}$"
+      }
+    },
+    {
+      "name": "pays",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "unique": true
+      }
+    },
+    {
+      "name": "salary_median_ED0-2",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "salary_median_ED3-4",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "salary_median_ED5-8",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "salary_gap_ED5-8_vs_ED0-2",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "From_0-2_To_0-2",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "From_0-2_To_3-4",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "From_0-2_To_5-8",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "From_3-4_To_0-2",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "From_3-4_To_3-4",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "From_3-4_To_5-8",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "From_5-8_To_0-2",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "From_5-8_To_3-4",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "From_5-8_To_5-8",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "From_5-6_To_0-2",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "From_5-6_To_3-4",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "From_5-6_To_5-8",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "ppp_value",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "score_maths_pisa",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "score_lecture_pisa",
+      "type": "number",
+      "constraints": { "required": false }
+    },
+    {
+      "name": "variance_maths_pisa",
+      "type": "number",
+      "constraints": { "required": false }
+    }
+  ]
+}
